@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: url(/images/bg-mobile.svg) no-repeat;
+  background-size: contain;
+  background-color: var(--violet);
+  max-width: 90%;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+.logo {
+  width: 8rem;
+  padding-top: 2rem;
+}
+
+.hero {
+  max-width: 100%;
+  padding-top: 3.5rem;
+}
+
+main {
+  text-align: center;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 1.7rem;
+  margin-top: 4rem;
+  font-weight: 600;
+}
+
+.paragraph {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7rem;
+}
+
+.button {
+  text-decoration: none;
+  color: var(--violet);
+  background-color: white;
+  margin: 1.6rem auto 0;
+  display: block;
+  width: 12rem;
+  padding: 1rem 0;
+  border-radius: 3rem;
+  box-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  color: white;
+  background-color: var(--soft-magenta);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0 2rem;
+  gap: 1rem;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.icon:hover {
+  color: var(--soft-magenta);
+  border-color: var(--soft-magenta);
+}
+
+footer div:last-child {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url("/images/bg-desktop.svg");
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 12rem;
+    padding-top: 1rem;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+    padding-top: 1rem;
+  }
+
+  main .hero {
+    max-width: 50%;
+    padding: 0;
+  }
+
+  main > div {
+    width: 50%;
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+
+  .title {
+    margin: 0;
+    padding-right: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .paragraph {
+    font-size: 1.25rem;
+    padding-right: 1rem;
+    line-height: 1.9rem;
+  }
+
+  .button {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  footer {
+    padding: 2rem 0;
+    margin-left: auto;
+  }
+}
